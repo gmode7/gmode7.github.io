@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghost Mode</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#000;color:#00ff41;font-family:'Share Tech Mono',monospace;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:40px 20px;overflow:hidden;position:relative}
+  body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(to bottom,transparent 0px,transparent 2px,rgba(0,0,0,0.12) 2px,rgba(0,0,0,0.12) 4px);pointer-events:none;z-index:100}
+  body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at center,transparent 60%,rgba(0,0,0,0.7) 100%);pointer-events:none;z-index:99}
+  .card{text-align:center;z-index:1}
+  .prompt{font-size:.75rem;color:#00cc33;letter-spacing:.15em;margin-bottom:8px}
+  h1{font-family:'VT323',monospace;font-size:4rem;color:#00ff41;text-shadow:0 0 20px #00ff41,0 0 40px rgba(0,255,65,.4);line-height:1}
+  .tagline{font-size:.8rem;color:#00cc33;margin-top:12px;letter-spacing:.08em}
+  .divider{border:none;border-top:1px solid #003f0f;margin:24px auto;width:60%}
+  .link{display:inline-block;margin-top:4px;font-size:.75rem;color:#006614;text-decoration:none;letter-spacing:.1em;border:1px solid #003f0f;padding:8px 20px;transition:all .3s}
+  .link:hover{color:#00ff41;border-color:#00ff41;box-shadow:0 0 10px rgba(0,255,65,.3)}
+  .link span{color:#00cc33}
+  .nip{margin-top:24px;font-size:.6rem;color:#003f0f;letter-spacing:.15em}
+  .cursor{display:inline-block;width:3px;height:1em;background:#00ff41;vertical-align:text-bottom;animation:blink 1s step-end infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="prompt">root@nostr:~$ whoami</div>
+  <h1>Ghost Mode<span class="cursor"></span></h1>
+  <div class="tagline">Bitcoin. Sovereignty. Philosophy.</div>
+  <hr class="divider">
+  <a class="link" href="https://primal.net/p/npub1cyly2a70z8upep4v46yxfkrf5xmj578cvj6ww54vv42tw35vgp4qn4v67l"><span>→</span> Find me on Nostr</a>
+  <div class="nip">NIP-05 · ghost_mode@gmode7.github.io</div>
+</div>
+</body>
+</html>
